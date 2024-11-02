@@ -15,6 +15,7 @@ const config: Config = {
         primaryOne: "#ffbcbc",
       },
       fontSize: {
+        xxsm: "0.5rem",
         xsm: "0.6rem",
         xsmp: "0.7rem",
       },

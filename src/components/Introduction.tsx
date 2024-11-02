@@ -7,7 +7,7 @@ const mochiy = Mochiy_Pop_One({ weight: "400", preload: false });
 // 2xl:h-[60vh] xl:h-[60vh] lg:h-[60vh] md:h-[55vh] sm:h-[55vh] xsm:h-[60vh]
 export default function Introduction() {
   return (
-    <main className="2xl:h-[60vh] xl:h-[55vh] lg:h-[50vh] md:h-[45vh] sm:h-[40vh] xsm:h-[40vh] flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-col sm:flex-col xsm:flex-col md:justify-between sm:justify-between xsm:justify-between items-center">
+    <main className="2xl:h-[60vh] xl:h-[55vh] lg:h-[50vh] md:h-[45vh] sm:h-[40vh] xsm:h-[35vh] flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-col sm:flex-col xsm:flex-col md:justify-between sm:justify-between xsm:justify-between items-center">
       {/* First Child  */}
       <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-full sm:w-full flex flex-col 2xl:gap-y-8 xl:gap-y-7 lg:gap-y-6 md:gap-y-6 sm:gap-y-6 xsm:gap-y-4">
         <div className="w-fit flex justify-between items-center gap-x-3">
@@ -23,7 +23,7 @@ export default function Introduction() {
           <h2 className="2xl:text-5xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-xl font-bold 2xl:mb-4">
             🎗️ Hi, my name is Shiva
           </h2>
-          <p className="2xl:text-2xl xl:text-base lg:text-sm md:text-base sm:text-sm xsm:text-xsmp 2xl:leading-10 xl:leading-8 lg:leadding-6 md:leading-6 sm:leading-6 xsm:leading-5 text-justify">
+          <p className="2xl:text-2xl xl:text-base lg:text-sm md:text-base sm:text-sm xsm:text-xsmp 2xl:leading-10 xl:leading-8 lg:leadding-6 md:leading-6 sm:leading-7 xsm:leading-7 text-justify">
             Bits, bytes and binary came to life during the later years of my
             Physics graduation. Absurd! but it dates back to my Diploma days in
             Electrical Engineering when transistors were introduced. I never
@@ -38,7 +38,7 @@ export default function Introduction() {
           return (
             <div key={index}>
               <p
-                className={`${mochiy.className} w-fit 2xl:text-3xl xl:text-3xl lg:text-2xl md:text-xl sm:text-lg xsm:text-base font-bold uppercase tracking-wide hover:text-slate-600`}
+                className={`${mochiy.className} w-fit 2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg sm:text-base xsm:text-sm font-bold uppercase underline 2xl:underline-offset-8 xl:underline-offset-8 lg:underline-offset-8 md:underline-offset-8 sm:underline-offset-4 xsm:underline-offset-4 tracking-wide hover:text-slate-600`}
               >
                 <Link href={element.navigation}>{element.title}</Link>
               </p>

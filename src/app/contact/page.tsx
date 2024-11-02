@@ -5,31 +5,37 @@ const mochiy = Mochiy_Pop_One({ weight: "400", preload: false });
 
 export default function Contact() {
   return (
-    <section className="w-11/12 m-auto mb-16 flex justify-between items-start">
+    <section className="w-11/12 m-auto flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-col xsm:flex-col justify-between items-start 2xl:mb-16 xl:mb-16 lg:mb-16 md:mb-12 sm:mb-12 xsm:mb-10">
       {/* Header container  */}
-      <div className="w-1/2">
-        <div className="mb-12">
-          <h2 className={`${mochiy.className} text-xl font-light`}>CONTACT</h2>
-          <p className="text-xs font-extralight">
+      <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-full xsm:w-full 2xl:mb-0 xl:mb-0 lg:mb-0 md:mb-0 sm:mb-10 xsm:mb-8">
+        {/* Heading container  */}
+        <div className="2xl:mb-14 xl:mb-12 lg:mb-12 md:mb-12 sm:mb-8 xsm:mb-6 2xl:p-0 xl:p-0 lg:p-0 md:p-0 sm:pb-3 xsm:pb-3 2xl:border-none xl:border-none lg:border-none md:border-none sm:border-b-2 xsm:border-b-2 sm:dark:border-gray-500 xsm:dark:border-gray-500">
+          <h2
+            className={`${mochiy.className} 2xl:text-2xl xl:text-xl lg:text-xl md:text-lg sm:text-base xsm:text-sm font-light`}
+          >
+            CONTACT
+          </h2>
+          <p className="2xl:text-sm xl:text-xs lg:text-xs md:text-xs sm:text-xsm xsm:text-xsm font-extralight">
             Looking forward to hearing from you
           </p>
         </div>
-        <div className="flex flex-wrap gap-20 gap-y-8">
+        {/* Links container  */}
+        <div className="flex flex-wrap 2xl:gap-10 xl:gap-8 lg:gap-8 md:gap-6 gap-y-6 2xl:justify-start xl:justify-start lg:justify-start md:justify-start sm:justify-between xsm:justify-between 2xl:p-0 xl:p-0 lg:p-0 md:p-0 sm:px-6 xsm:px-4">
           <div>
-            <h3 className="lg:text-lg md:text-base sm:text-base font-normal tracking-wide">
+            <h3 className="2xl:text-xl xl:text-lg lg:text-lg md:text-base sm:text-base xsm:text-sm font-normal tracking-wide">
               Email
             </h3>
-            <p className="text-sm font-normal underline text-blue-500 underline-offset-2">
+            <p className="lg:text-sm md:text-sm sm:text-xsmp xsm:text-xsm font-normal underline text-blue-500 underline-offset-2">
               <Link rel="noopener noreferrer" href={`mailto:${personal.email}`}>
                 {personal.email}
               </Link>
             </p>
           </div>
           <div>
-            <h3 className="lg:text-lg md:text-base sm:text-base font-normal tracking-wide">
+            <h3 className="2xl:text-xl xl:text-lg lg:text-lg md:text-base sm:text-base xsm:text-sm font-normal tracking-wide">
               Github
             </h3>
-            <p className="text-sm font-normal underline text-blue-500 underline-offset-2">
+            <p className="lg:text-sm md:text-sm sm:text-xsmp xsm:text-xsm font-normal underline text-blue-500 underline-offset-2">
               <Link
                 rel="noopener noreferrer"
                 href={`https://www.${personal.github}`}
@@ -39,10 +45,10 @@ export default function Contact() {
             </p>
           </div>
           <div>
-            <h3 className="lg:text-lg md:text-base sm:text-base font-normal tracking-wide">
+            <h3 className="2xl:text-xl xl:text-lg lg:text-lg md:text-base sm:text-base xsm:text-sm font-normal tracking-wide">
               LinkedIn
             </h3>
-            <p className="text-sm font-normal underline text-blue-500 underline-offset-2">
+            <p className="lg:text-sm md:text-sm sm:text-xsmp xsm:text-xsm font-normal underline text-blue-500 underline-offset-2">
               <Link
                 rel="noopener noreferrer"
                 href={`https://www.${personal.linkedIn}`}
@@ -54,7 +60,7 @@ export default function Contact() {
         </div>
       </div>
       {/* Form container  */}
-      <div className="w-1/2 flex justify-center">
+      <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-full xsm:w-full 2xl:p-0 xl:p-0 lg:p-0 md:p-0 sm:px-6 xsm:px-4 flex justify-center">
         <form className="w-full">
           <div className="flex justify-between items-end mb-8">
             <label className="font-medium" htmlFor="first_name">

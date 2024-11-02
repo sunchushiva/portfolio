@@ -39,23 +39,30 @@ export default function ProjectComponent() {
     setFilter(value);
   };
 
+  // sticky top-20
+
   return (
     <Suspense>
       <section className="w-11/12 m-auto lg:mb-16 md:mb-12 sm:mb-12">
-        <div className="w-full flex items-center justify-between lg:mb-12 md:mb-12 sm:mb-8 pb-3 border-b-2 dark:border-gray-500">
-          <div>
-            <h2 className={`${mochiy.className} text-xl font-light`}>
+        {/* Header container  */}
+        <div className="w-full flex items-start justify-between 2xl:mb-14 xl:mb-14 lg:mb-14 md:mb-12 sm:mb-8 xsm:mb-6 pb-3 border-b-2 dark:border-gray-500 bg-foreground">
+          {/* Heading container  */}
+          <div className="w-1/2">
+            <h2
+              className={`${mochiy.className} 2xl:text-2xl xl:text-xl lg:text-xl md:text-lg sm:text-base xsm:text-sm font-light`}
+            >
               PROJECTS
             </h2>
-            <p className="text-xs font-extralight">
+            <p className="2xl:text-sm xl:text-xs lg:text-xs md:text-xs sm:text-xsm xsm:text-xsm font-extralight">
               These are my latest works, feedback is appreciated
             </p>
           </div>
-          <div>
+          {/* Dropdown container  */}
+          <div className="w-1/2 flex justify-end">
             <select
               onChange={onChangeFunction}
               value={filter}
-              className="border-slate-700 border-[1.35px] lg:text-base md:text-sm sm:text-sm font-medium lg:px-3 md:px-3 sm:px-2 lg:py-2 md:py-1 sm:py-1 rounded cursor-pointer outline-none tracking-wide"
+              className="border-slate-700 border-[1.35px] lg:text-base md:text-sm sm:text-sm xsm:text-xsmp font-medium lg:px-3 md:px-3 sm:px-2 xsm:p-1 lg:py-2 md:py-1 sm:py-1 xsm:py-1 rounded cursor-pointer outline-none tracking-wide"
             >
               {forSelectTag?.map((element, index) => {
                 return (
@@ -67,7 +74,8 @@ export default function ProjectComponent() {
             </select>
           </div>
         </div>
-        <div className="flex flex-col space-y-20">
+        {/* Projects container  */}
+        <div className="grid 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xsm:grid-cols-1 gap-6">
           <ProjectsContainer projects={projects} filter={filter} />
         </div>
       </section>
